@@ -5,8 +5,8 @@ main = do
   print_code keypad1 rules1 start1 input
   print_code keypad2 rules2 start2 input
 
-print_code keypad rules init input =
-  print $ map (keypad !) $ tail $ scanl (foldl rules) init (lines input)
+print_code keypad rules start input =
+  print $ map (keypad !) $ tail $ scanl (foldl rules) start (lines input)
 
 
 start1 = (0, 0)
